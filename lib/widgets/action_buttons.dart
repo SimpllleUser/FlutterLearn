@@ -9,9 +9,9 @@ class ActionButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //final UserBloc userBloc = BlocProvider.of<UserBloc>(context, listen: false);
-    final UserBloc userBloc = context.read<UserBloc>();
+    // final UserBloc userBloc = context.read<UserBloc>();
     // final UserBloc userBloc = BlocProvider.of<UserBloc>(context, listen: true);
-    // final UserBloc userBloc = context.watch<UserBloc>();
+    final UserBloc userBloc = context.watch<UserBloc>();
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [

@@ -14,8 +14,9 @@ class UserList extends StatelessWidget {
       listener: ((context, state) {
         log(state.toString());
         if (state is UserLoadedState) {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(const SnackBar(content: Text('Users is Loaded')));
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text('Users is Loaded'),
+              duration: Duration(seconds: 1)));
         }
       }),
       builder: (context, state) {
