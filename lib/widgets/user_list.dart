@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:myapp/cubit/user_cubit.dart';
 
 import '../bloc/user_bloc.dart';
 import '../bloc/user_state.dart';
@@ -10,7 +11,7 @@ class UserList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<UserBloc, UserState>(
+    return BlocConsumer<UserCubit, UserState>(
       listener: ((context, state) {
         log(state.toString());
         if (state is UserLoadedState) {
